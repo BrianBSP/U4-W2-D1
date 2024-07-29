@@ -1,5 +1,7 @@
 package es3;
 
+import exceptions.BancaException;
+
 public class ContoOnline extends ContoCorrente {
     private double maxPrelievo;
 
@@ -15,6 +17,13 @@ public class ContoOnline extends ContoCorrente {
     public void preleva(double x) {
         if (x <= maxPrelievo) {
             super.preleva(x);
+        } else if (x > maxPrelievo) {
+            try {
+                throw new BancaException("Il prelievo non è disponibile!");
+
+            } catch (BancaException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
