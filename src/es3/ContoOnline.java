@@ -21,6 +21,7 @@ public class ContoOnline extends ContoCorrente {
             try {
                 throw new BancaException("Il prelievo non è disponibile!");
 
+
             } catch (BancaException e) {
                 throw new RuntimeException(e);
             }
