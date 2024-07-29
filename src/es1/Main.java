@@ -18,9 +18,11 @@ public class Main {
 
         System.out.println(Arrays.toString(numbers));
 
+
         while (true) {
             System.out.println("Inserisci un numero da mettere all'interno dell'array. Il numero deve essere compreso da 1 e 10.");
             int input = Integer.parseInt(scanner.nextLine());
+
 
             if (input == 0) {
                 System.out.println("Hai spento l'applicazione!!");
